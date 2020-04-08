@@ -1,0 +1,25 @@
+{
+  "name": "gulp-touch-custom",
+  "version": "1.0.2",
+  "description": "Change file access and modification times",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jimbly/gulp-touch-custom.git"
+  },
+  "author": "Jimb Esser (https://github.com/Jimbly/)",
+  "main": "index.js",
+  "dependencies": {
+    "through2": "^3.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "vinyl": "^2.2.0"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "scripts": {
+    "test": "gulp -f test.js"
+  }
+}
