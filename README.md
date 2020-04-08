@@ -23,8 +23,7 @@ var gulp = require('gulp');
 var touch = require('gulp-touch-custom');
 
 gulp.task('default', function() {
-  gulp
-    .src('./src/**/*')
+  return gulp.src('./src/**/*')
     .pipe(gulp.dest('./dest'))
     .pipe(touch());
 });
@@ -34,11 +33,13 @@ gulp.task('default', function() {
 
 ```js
 var gulp = require('gulp');
+var through = require('through2');
 var touch = require('gulp-touch-custom');
+var Vinyl = require('vinyl');
 
 function exampleproc() {
   return through.obj(function (file, encoding, cb) {
-    // This gulp step options multiple files
+    // This gulp step outputs multiple files
     this.push(new Vinyl({
       path: file.relative + '.stamp',
       contents: Buffer.from('Hello, World.'),
