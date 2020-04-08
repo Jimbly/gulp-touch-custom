@@ -20,7 +20,7 @@ function exampleproc() {
   });
 }
 
-gulp.task('default', function (next) {
+gulp.task('default', function () {
   return gulp.src('./test.js')
     .pipe(exampleproc())
     .pipe(gulp.dest('./dest'))
